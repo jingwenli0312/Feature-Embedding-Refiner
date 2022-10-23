@@ -62,16 +62,6 @@ class ACTOR_RECONSTRUCT(nn.Module):
             solu_embed = self.get_init_hidden()
             solu_embed = solu_embed[None, :].repeat(batch_s * graph_s, 1)  # (bs*gs, embed_dim)
 
-        # encoded_nodes_new = POMO_embedding
-        # [bs, gs, embed_dim]
-        # solu_embed = self.gat_solution(POMO_embedding, history_solutions.transpose(0, 1),
-        #                                                history_costs.transpose(0, 1), dist, solu_embed)
-        #
-        # encoded_nodes_new = self.cell(solu_embed.view(-1, self.embedding_dim),
-        #                               POMO_embedding.view(-1, self.embedding_dim)).view(batch_s, graph_s, -1)
-
-
-
         solu_embed_elu, solu_embed = self.gat_solution(POMO_embedding, history_solutions.transpose(0, 1),
                                                        history_costs.transpose(0, 1), dist, solu_embed)
 
