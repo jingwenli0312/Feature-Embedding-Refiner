@@ -91,7 +91,7 @@ def run(opts):
     # Do validation only
     if opts.eval_only:
         cri = np.logspace(np.log(opts.epoch_start + 1), np.log(opts.epoch_end + 1), opts.epoch_end, base=np.exp(1))
-        validate(problem, agent, val_dataset, tb_logger, epoch=205, cri=cri)
+        validate(problem, agent, val_dataset, tb_logger, epoch=99, cri=cri)
 
     else:
         if opts.resume:
