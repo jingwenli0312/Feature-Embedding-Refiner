@@ -1,14 +1,6 @@
 # FER-AM
 This a repo for developing the Feature Embedding Refiner (FER) based on Attention Model (AM) for TSP and CVRP (work in progress).
 
-
-# dependencies
-* Python>=3.6
-* PyTorch>=1.1
-* numpy
-* tqdm
-* tensorboard_logger
-
 # TSP
 ## Training
 ```python
