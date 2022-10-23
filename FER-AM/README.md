@@ -9,7 +9,6 @@ This a repo for developing the feature embedding refiner (FER) based on attentio
 * tqdm
 * tensorboard_logger
 
-Please refer to [issue #27](https://github.com/TeamHG-Memex/tensorboard_logger/issues/27) to fix it.
 
 # CVRP
 ## Training
