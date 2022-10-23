@@ -42,4 +42,4 @@ python run.py --eval_only --load_path '{add model to load here}' --problem cvrp 
 ```
 
 ## Acknowledgements
-Thanks to [yd-kwon/POMO](https://https://github.com/yd-kwon/POMO) for getting me started with the code for the Policy Optimization with Multiple Optima (POMO).
+Thanks to [yd-kwon/POMO](https://github.com/yd-kwon/POMO) for getting me started with the code for the Policy Optimization with Multiple Optima (POMO).
