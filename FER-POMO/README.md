@@ -1,5 +1,5 @@
 # FER-POMO
-This a repo for developing the Feature Embedding Refiner (FER) based on Policy Optimization with Multiple Optima (POMO) for TSP and CVRP (work in progress).
+This a repo for developing the Feature Embedding Refiner (FER) based on Policy Optimization with Multiple Optima (POMO) for TSP and CVRP.
 
 # TSP
 ## Training
