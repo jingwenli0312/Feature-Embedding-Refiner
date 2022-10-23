@@ -3,8 +3,8 @@
 Based on pre-traiend neural construction models such as Attention model (AM) and Policy Optimization with Multiple Optima (POMO), feature embedding refiner (FER) learns to iteratively boost the performance of construction models by adding a refiner between the encoder and decoder to better synergize them.
 
 # dependencies
-* Python>=3.6
-* PyTorch>=1.1
+* Python>=3.7
+* PyTorch>=1.6
 * numpy
 * tqdm
 * tensorboard_logger
