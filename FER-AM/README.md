@@ -1,5 +1,5 @@
 # FER-AM
-This a repo for developing the feature embedding refiner (FER) based on attention model (AM) for TSP and CVRP (work in progress).
+This a repo for developing the Feature Embedding Refiner (FER) based on Attention Model (AM) for TSP and CVRP (work in progress).
 
 
 # dependencies
@@ -32,4 +32,4 @@ python run.py --eval_only --load_path '{add model to load here}' --problem cvrp 
 ```
 
 ## Acknowledgements
-Thanks to [wouterkool/attention-learn-to-route](https://github.com/wouterkool/attention-learn-to-route) for getting me started with the code for the attention model (AM).
+Thanks to [wouterkool/attention-learn-to-route](https://github.com/wouterkool/attention-learn-to-route) for getting me started with the code for the Attention Model (AM).
