@@ -1,4 +1,4 @@
-# FER-AM
+# FER-POMO
 This a repo for developing the Feature Embedding Refiner (FER) based on Policy Optimization with Multiple Optima (POMO) for TSP and CVRP (work in progress).
 
 
@@ -12,7 +12,7 @@ This a repo for developing the Feature Embedding Refiner (FER) based on Policy O
 # TSP
 ## Training
 ```python
-python run.py --problem tsp --graph_size 20 --pretrained pretrained/Saved_TSP20_Model/ACTOR_state_dic.pt --epoch_end 100 --batch_size 512 --epoch_size 10240 --val_size 1000 --eval_batch_size 1000 --T_max 200 --K 6
+python run.py --problem tsp --graph_size 20 --pretrained pretrained/Saved_TSP20_Model/ACTOR_state_dic.pt --epoch_end 100 --batch_size 100 --epoch_size 1000 --val_size 1000 --eval_batch_size 1000 --T_max 200 --K 6
 ```
 
 ## Test Only
@@ -28,7 +28,7 @@ python run.py --eval_only --load_path '{add model to load here}' --problem tsp -
 # CVRP
 ## Training
 ```python
-python run.py --problem cvrp --graph_size 20 --pretrained pretrained/Saved_CVRP20_Model/ACTOR_state_dic.pt --epoch_end 100 --batch_size 512 --epoch_size 10240 --val_size 1000 --eval_batch_size 1000 --T_max 200 --K 6
+python run.py --problem cvrp --graph_size 20 --pretrained pretrained/Saved_CVRP20_Model/ACTOR_state_dic.pt --epoch_end 100 --batch_size 100 --epoch_size 1000 --val_size 1000 --eval_batch_size 1000 --T_max 200 --K 6
 ```
 
 ## Test only
@@ -42,4 +42,4 @@ python run.py --eval_only --load_path '{add model to load here}' --problem cvrp 
 ```
 
 ## Acknowledgements
-Thanks to [wouterkool/attention-learn-to-route](https://https://github.com/yd-kwon/POMO) for getting me started with the code for the Policy Optimization with Multiple Optima (POMO).
+Thanks to [yd-kwon/POMO](https://https://github.com/yd-kwon/POMO) for getting me started with the code for the Policy Optimization with Multiple Optima (POMO).
