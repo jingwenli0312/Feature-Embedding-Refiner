@@ -7,7 +7,6 @@ from tensorboard_logger import Logger as TbLogger
 
 from options import get_options
 
-# from problems.pdp.problem_pdp import PDP
 from problems.tsp.problem_tsp import TSP
 from problems.vrp.problem_vrp import CVRP
 
@@ -83,10 +82,6 @@ def run(opts):
     val_dataset = problem.make_dataset(size=opts.graph_size,
                                        num_samples=opts.val_size,
                                        filename=opts.val_dataset)
-
-    # if isinstance(AM_model, torch.nn.DataParallel):
-    #     AM_model = AM_model.module
-    #     agent.AM = AM_model
 
     # Do validation only
     cri = np.logspace(np.log(1), np.log(101), opts.epoch_end, base=np.exp(1))
