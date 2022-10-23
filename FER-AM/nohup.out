@@ -1,0 +1,72 @@
+2021-04-26 20:20:35.036841: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudart.so.10.1
+2021-04-26 20:20:55.813401: I tensorflow/stream_executor/platform/default/dso_loader.cc:48] Successfully opened dynamic library libcudart.so.10.1
+{'K_epochs': 3,
+ 'P': 20,
+ 'RL_agent': 'a2c',
+ 'T_max': 5000,
+ 'T_train': 100,
+ 'alpha': 0.2,
+ 'batch_size': 512,
+ 'checkpoint_encoder': False,
+ 'checkpoint_epochs': 1,
+ 'critic_head_num': 8,
+ 'decoder_head_num': 1,
+ 'embedding_dim': 128,
+ 'encoder_head_num': 8,
+ 'epoch_end': 100,
+ 'epoch_size': 10240,
+ 'epoch_start': 0,
+ 'eps_clip': 0.1,
+ 'eps_range': 0.005,
+ 'eval_batch_size': 10000,
+ 'eval_only': True,
+ 'feed_forward_dim': 256,
+ 'gamma': 0.999,
+ 'graph_size': 100,
+ 'hidden_dim': 128,
+ 'hidden_edge_dim': 32,
+ 'init_val_met': 'p2d',
+ 'load_path': 'outputs/tsp_100/tsp100_update_newembed_6solu_5e-5_5e-6_0.99_nstep4_soluembed_GRU_embedAM_20embednew_6hissolu_20210419T121429/epoch-90.pt',
+ 'log_dir': 'logs',
+ 'log_step': 10,
+ 'lr_critic': 5e-06,
+ 'lr_decay': 0.99,
+ 'lr_model': 5e-05,
+ 'max_grad_norm': 1.0,
+ 'n_encode_layers': 3,
+ 'n_step': 4,
+ 'no_cuda': False,
+ 'no_figures': False,
+ 'no_progress_bar': False,
+ 'no_saving': False,
+ 'no_tb': False,
+ 'normalization': 'batch',
+ 'output_dir': 'outputs',
+ 'problem': 'pdp',
+ 'record': False,
+ 'resume': None,
+ 'reward_clip': 1,
+ 'run_name': 'run_name_20210426T202057',
+ 'save_dir': 'outputs/pdp_100/run_name_20210426T202057',
+ 'seed': 1234,
+ 'shrink_size': None,
+ 'step_method': 'insert',
+ 'tanh_clipping': 10.0,
+ 'use_assert': False,
+ 'use_cuda': True,
+ 'use_real_mask': False,
+ 'val_dataset': './datasets/tsp_100_10000.pkl',
+ 'val_size': 10000,
+ 'warm_up': 6}
+  [*] Loading data from ./pretrained/pdp_100/epoch-796.pt
+Traceback (most recent call last):
+  File "run.py", line 112, in <module>
+    run(get_options())
+  File "run.py", line 72, in run
+    agent.load_AM('./pretrained/pdp_100/epoch-796.pt')
+  File "/home/lijw/Learn_to_Reconstruct_LSTM/agent/a2c.py", line 87, in load_AM
+    model_.load_state_dict({**model_.state_dict(), **load_data.get('model', {})})
+  File "/home/lijw/miniconda3/lib/python3.7/site-packages/torch/nn/modules/module.py", line 839, in load_state_dict
+    self.__class__.__name__, "\n\t".join(error_msgs)))
+RuntimeError: Error(s) in loading state_dict for AttentionModel:
+	Unexpected key(s) in state_dict: "embedder.layers.0.0.module.W1_query", "embedder.layers.0.0.module.W2_query", "embedder.layers.0.0.module.W3_query", "embedder.layers.0.0.module.W4_query", "embedder.layers.0.0.module.W5_query", "embedder.layers.0.0.module.W6_query", "embedder.layers.1.0.module.W1_query", "embedder.layers.1.0.module.W2_query", "embedder.layers.1.0.module.W3_query", "embedder.layers.1.0.module.W4_query", "embedder.layers.1.0.module.W5_query", "embedder.layers.1.0.module.W6_query", "embedder.layers.2.0.module.W1_query", "embedder.layers.2.0.module.W2_query", "embedder.layers.2.0.module.W3_query", "embedder.layers.2.0.module.W4_query", "embedder.layers.2.0.module.W5_query", "embedder.layers.2.0.module.W6_query". 
