@@ -217,9 +217,6 @@ class Actor(nn.Module):
 
         AM_embedding_new = self.cell(solu_embed_elu.view(-1, self.embedding_dim),
                                       AM_embedding.view(-1, self.embedding_dim)).view(batch_size, graph_size, -1)
-        
-        # AM_embedding_new = self.embed_project(torch.cat((AM_embedding, solu_embed_elu), -1))
-        # AM_embedding_new = (AM_embedding + solu_embed_elu) / 2
 
 
         if AM_embed_new_only:
@@ -227,13 +224,7 @@ class Actor(nn.Module):
 
         _log_p, pi = AM_decoder(batch, AM_embedding_new)
         cost = self.problem.get_costs(batch, pi, multi_solu=False)
-        # ll = self._calc_log_likelihood(_log_p, pi)
-        # solutions.append(pi)
-        # costs.append(cost)
-        # log_p.append(_log_p.sum(1))
-
-        # return solutions, log_p, costs, AM_embedding_new, solu_embed
-        # return torch.stack(solutions, 0), torch.stack(log_p, 0), torch.stack(costs, 0), AM_embedding_new, solu_embed
+        
         return pi, _log_p.sum(1), cost, AM_embedding_new, solu_embed
 
     def _calc_log_likelihood(self, _log_p, a):
