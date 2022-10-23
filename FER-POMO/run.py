@@ -8,7 +8,6 @@ from tensorboard_logger import Logger as TbLogger
 
 from options import get_options
 
-# from problems.pdp.problem_pdp import PDP
 from problems.tsp.problem_tsp import TSP
 from problems.vrp.problem_vrp import CVRP
 
