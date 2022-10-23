@@ -1,4 +1,4 @@
-# FER_AM
+# FER-AM
 This a repo for developing the feature embedding refiner (FER) based on attention model (AM) for TSP and CVRP (work in progress).
 
 
